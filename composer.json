@@ -1,0 +1,22 @@
+{
+  "name" : "nia/sql-adapter",
+  "description" : "Collection of interfaces to use SQL databases using the nia framework. The interfaces allow you to separate your connection into a read and a write connection.",
+  "require" : {
+    "php" : ">=7.0.0"
+  },
+  "license" : "MIT",
+  "keywords" : [ "nia", "database", "db", "adapter", "connection", "sql", "sqlite", "mysql", "mariadb", "postgresql", "mssql", "oracle", "pdo", "adapter", "read", "write", "readable", "writable", "writeable" ],
+  "minimum-stability" : "dev",
+  "autoload" : {
+    "psr-4" : {
+      "Nia\\Sql\\Adapter\\" : "sources/"
+    }
+  },
+  "type" : "library",
+  "homepage" : "http://www.nat-software.de",
+  "authors" : [ {
+    "name" : "Patrick Ullmann",
+    "email" : "patrick.ullmann@nat-software.de",
+    "role" : "lead"
+  } ]
+}
