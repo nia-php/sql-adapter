@@ -70,16 +70,28 @@ interface StatementInterface extends IteratorAggregate
     public function getSqlStatement(): string;
 
     /**
-     * Binds a value to a placeholder.
+     * Binds a value to a named placeholder.
      *
      * @param string $name
-     *            Placeholder name (alternativly the placeholder position).
+     *            Placeholder name.
      * @param mixed $value
      *            The value to bind.
      * @param int $type
      *            Explicit data type for the parameter using the Nia\Sql\Adapter\Statement\StatementInterface::TYPE_* constants. Default is string data type.
      */
     public function bind(string $name, $value, int $type = null);
+
+    /**
+     * Binds a value to a question mark placeholder.
+     *
+     * @param int $index
+     *            The placeholder position.
+     * @param mixed $value
+     *            The value to bind.
+     * @param int $type
+     *            Explicit data type for the parameter using the Nia\Sql\Adapter\Statement\StatementInterface::TYPE_* constants. Default is string data type.
+     */
+    public function bindIndex(int $index, $value, int $type = null);
 
     /**
      * Executes the prepared statement.
